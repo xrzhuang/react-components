@@ -75,5 +75,14 @@
                 "object": false
             }
         ]
+    },
+    "plugins": [
+        "react"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true,
+            "sourceType": "module"
+        }
     }
 }
