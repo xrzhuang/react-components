@@ -15,7 +15,9 @@ To begin, clone this repo. This repo contains our starterpack and skeleton code 
 To work with Material UI, install it with ```yarn add @material-ui/core```.
 
 We will be including Roboto as our default font and using icons from Material UI, so make sure your ```index.html``` file includes these two lines in the header (these should already be there, but check to make sure!):
+
 ```<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">```
+
 ```<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">```
 
 ## Step by Step
