@@ -11,36 +11,22 @@ import Typography from '@material-ui/core/Typography';
 import steps from '../steps.json';
 
 class AssignmentStepper extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      activeStep: 0,
-    };
-  }
-
   handleNext = () => {
-    this.setState(state => ({
-      activeStep: state.activeStep + 1,
-    }));
+    this.props.handleStepChange(this.props.activeStep + 1);
   };
 
   handleBack = () => {
-    this.setState(state => ({
-      activeStep: state.activeStep - 1,
-    }));
+    this.props.handleStepChange(this.props.activeStep - 1);
   };
 
   handleReset = () => {
-    this.setState({
-      activeStep: 0,
-    });
+    this.props.handleStepChange(0);
   };
 
   render() {
     const stepTitles = steps.map(step => step.title);
     const stepContent = steps.map(step => step.content);
-    const { activeStep } = this.state;
+    const { activeStep } = this.props;
 
     return (
       <div className="root">

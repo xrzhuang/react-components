@@ -11,13 +11,15 @@ class CurrentAssignment extends Component {
   }
 
     handleStepChange = (newStep) => {
-      this.setState();
+      this.setState(state => ({
+        activeStep: newStep,
+      }));
     }
 
     render() {
       return (
         <div>
-          <AssignmentStepper activeStep={this.state.activeStep} />
+          <AssignmentStepper activeStep={this.state.activeStep} handleStepChange={this.handleStepChange} />
         </div>
       );
     }
