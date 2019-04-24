@@ -1,0 +1,25 @@
+[
+    {
+        "title": "SA5",
+        "shortDescription": "React + Routing",
+        "longDescription": "What if you want your frontend to have routes — different URLs that map to different components and layouts of components? We’re going to add React Router to our starterpack so all your future projects can have it!",
+        "steps": [
+            {
+                "title": "Route Setup",
+                "content": "Setup three different routes to display a Welcome, About, and Test components"
+            },
+            {
+                "title": "URL Parameters",
+                "content": "Lets add support for parameters in our urls so our component can get some more info about the url we're on "
+            },
+            {
+                "title": "Unknown Routes",
+                "content": "Create a Fallback component that will be displayed whenever we are taken to an unknwon route"
+            },
+            {
+                "title": "Desployment",
+                "content": "Deploy our new site using surge so it can be viewed by everyone and graded"
+            }
+        ]
+    }
+]

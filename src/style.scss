@@ -4,7 +4,6 @@ body, html {
   height: 100%;
 }
 .logo {
-  background-image: url('img/download.jpeg');
   width: 100px;
   height: 100px;
   background-repeat: no-repeat;
@@ -27,6 +26,14 @@ body, html {
 
 .resetContainer {
   //padding: theme.spacing.unit * 3,
+}
+
+/**************************/
+
+/* styles for the progress bar */
+
+.progressBar {
+  height: 20px;
 }
 
 /**************************/
