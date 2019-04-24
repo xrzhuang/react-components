@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './style.scss';
+import CurrentAssignment from './components/current_assignment';
 
-const App = () => <div className="test">All the REACT are belong to us!</div>;
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    return <CurrentAssignment />;
+  }
+}
 
 ReactDOM.render(<App />, document.getElementById('main'));
