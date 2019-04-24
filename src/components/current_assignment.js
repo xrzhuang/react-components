@@ -40,13 +40,13 @@ class CurrentAssignment extends Component {
     return (
       <Card className={classes.root}>
         <CardHeader
-          title={this.state.currentAssignment.title}
-          subheader={this.state.currentAssignment.shortDescription}
+          title="Current Assignment"
+          subheader={this.state.currentAssignment.title}
         />
         <CardContent>
           <ProgressBar activeStep={this.state.activeStep} steps={this.state.currentAssignment.steps} />
           <div className={classes.descriptionContainer}>
-            <p className={classes.longDescription}>{this.state.currentAssignment.longDescription}</p>
+            <p className={classes.description}>{this.state.currentAssignment.description}</p>
             <IconButton
               className={classnames(classes.expand, {
                 [classes.expandOpen]: this.state.expanded,
@@ -83,7 +83,7 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
   },
-  longDescription: {
+  description: {
     maxWidth: '80%',
   },
 };

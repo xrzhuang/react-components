@@ -1,8 +1,7 @@
 [
     {
-        "title": "SA5",
-        "shortDescription": "React + Routing",
-        "longDescription": "What if you want your frontend to have routes — different URLs that map to different components and layouts of components? We’re going to add React Router to our starterpack so all your future projects can have it!",
+        "title": "SA5 React + Routing",
+        "description": "What if you want your frontend to have routes — different URLs that map to different components and layouts of components? We’re going to add React Router to our starterpack so all your future projects can have it!",
         "steps": [
             {
                 "title": "Route Setup",
