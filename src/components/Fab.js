@@ -24,7 +24,17 @@ class AlertDialog extends React.Component {
     render() {
       return (
         <div>
-          <Fab onClick={this.handleClickOpen} id="button" color="primary">
+          <Fab
+            variant="large"
+            onClick={this.handleClickOpen}
+            id="button"
+            color="primary"
+            position="fixed"
+            bottom="36px"
+            right="36px"
+            width="80px"
+            height="80px"
+          >
           Call Tim
           </Fab>
           <Dialog
