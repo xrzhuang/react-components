@@ -1,10 +1,10 @@
 [
     {
         "title": "SA5 React + Routing",
-        "date": "",
-        "image": "",
+        "date": "4/25/2019",
+        "image": "src/img/lab1.png",
         "description": {
-            "short": "",
+            "short": "Declarative routing for React",
             "long": "What if you want your frontend to have routes — different URLs that map to different components and layouts of components? We’re going to add React Router to our starterpack so all your future projects can have it!"
         },
         "steps": [
@@ -25,7 +25,7 @@
                 "content": "Deploy our new site using surge so it can be viewed by everyone and graded"
             }
         ],
-        "link": "url"
+        "link": "http://cs52.me/assignments/sa/routing/"
     },
     {
         "title": "title",

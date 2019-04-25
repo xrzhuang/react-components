@@ -69,7 +69,7 @@ class RecipeReviewCard extends React.Component {
         />
         <CardMedia
           className={classes.media}
-          image="src/img/lab1.png"
+          image="src/img/sa5.jpg"
           title="Lab1"
         />
         <CardContent>
