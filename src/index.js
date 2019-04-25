@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import RecipeReviewCard from './components/pastAssignment';
 import './style.scss';
+import NavBar from './components/nav_bar';
 import CurrentAssignment from './components/current_assignment';
 import AlertDialog from './components/Fab';
 
@@ -14,6 +15,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <NavBar />
         <CurrentAssignment />
         <RecipeReviewCard />
         <AlertDialog />
@@ -21,9 +23,5 @@ class App extends Component {
     );
   }
 }
-
-// RecipeReviewCard.propTypes = {
-//   classes: PropTypes.object.isRequired,
-// };
 
 ReactDOM.render(<App />, document.getElementById('main'));
