@@ -71,9 +71,18 @@ class CurrentAssignment extends Component {
 
 const styles = {
   root: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexDirection: 'column',
     textAlign: 'center',
     marginTop: '20px',
     marginBottom: '20px',
+    width: '60%',
+  },
+  media: {
+    height: 0,
+    paddingTop: '40%',
+    backgroundSize: 'cover',
   },
   expand: {
     marginLeft: 5,
@@ -91,10 +100,6 @@ const styles = {
   },
   description: {
     maxWidth: '80%',
-  },
-  media: {
-    height: 0,
-    paddingTop: '56.25%', // 16:9
   },
 };
 

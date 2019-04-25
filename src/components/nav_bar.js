@@ -12,13 +12,17 @@ const styles = {
   header: {
     marginRight: 'auto',
   },
+  nav: {
+    boxShadow: '0px 0px',
+    width: '100%',
+  },
 };
 
 const NavBar = (props) => {
   const { classes } = props;
   return (
-    <div>
-      <AppBar position="static" color="default">
+    <div className="navDiv">
+      <AppBar position="static" color="default" className={classes.nav}>
         <Toolbar>
           <Typography variant="h6" color="inherit" className={classes.header}>
             Dartmouth CS52 — 19S
