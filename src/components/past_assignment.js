@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import classnames from 'classnames';
 import Card from '@material-ui/core/Card';
@@ -15,13 +14,74 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Button from '@material-ui/core/Button';
 
+class PastAssignment extends React.Component {
+  state = { expanded: false };
+
+  handleExpandClick = () => {
+    this.setState(state => ({ expanded: !state.expanded }));
+  };
+
+  setCurrentAssignment = () => {
+    this.props.setCurrentAssignment(this.props.index);
+  }
+
+  render() {
+    const { classes } = this.props;
+    const { assignment } = this.props;
+
+    return (
+      <Card className={classes.card}>
+        <CardHeader
+          title={assignment.title}
+          subheader={assignment.date}
+        />
+        <CardMedia
+          className={classes.media}
+          image={assignment.image}
+          title={assignment.title}
+        />
+        <CardContent>
+          <Typography component="p">
+            {assignment.description.short}
+          </Typography>
+        </CardContent>
+        <CardActions className={classes.actions} disableActionSpacing>
+          <IconButton aria-label="Add to favorites">
+            <FavoriteIcon />
+          </IconButton>
+          <Button size="small" href={assignment.link}>View</Button>
+          <Button size="small" onClick={this.setCurrentAssignment}>Set To Current</Button>
+          <IconButton
+            className={classnames(classes.expand, {
+              [classes.expandOpen]: this.state.expanded,
+            })}
+            onClick={this.handleExpandClick}
+            aria-expanded={this.state.expanded}
+            aria-label="Show more"
+          >
+            <ExpandMoreIcon />
+          </IconButton>
+        </CardActions>
+        <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
+          <CardContent>
+            <Typography paragraph>Method:</Typography>
+            <Typography paragraph>
+              {assignment.description.long}
+            </Typography>
+          </CardContent>
+        </Collapse>
+      </Card>
+    );
+  }
+}
+
 const styles = theme => ({
   card: {
     maxWidth: 400,
   },
   media: {
     height: 0,
-    paddingTop: '56.25%', // 16:9
+    paddingTop: '56.25%',
   },
   actions: {
     display: 'flex',
@@ -40,81 +100,4 @@ const styles = theme => ({
     backgroundColor: red[500],
   },
 });
-
-class RecipeReviewCard extends React.Component {
-  state = { expanded: false };
-
-  handleExpandClick = () => {
-    this.setState(state => ({ expanded: !state.expanded }));
-  };
-
-  render() {
-    const { classes } = this.props;
-
-    return (
-      <Card className={classes.card}>
-        <CardHeader
-          // avatar={(
-          //   <Avatar aria-label="Recipe" className={classes.avatar}>
-          //     R
-          //   </Avatar>
-          // )}
-          // action={(
-          //   <IconButton>
-          //     <MoreVertIcon />
-          //   </IconButton>
-          // )}
-          title="Lab 1"
-          subheader="April 6, 2019"
-        />
-        <CardMedia
-          className={classes.media}
-          image="src/img/sa5.jpg"
-          title="Lab1"
-        />
-        <CardContent>
-          <Typography component="p">
-          Your assignment, should you choose to accept it, (not sure you have much choice there…) is to create a landing page.
-          </Typography>
-        </CardContent>
-        <CardActions className={classes.actions} disableActionSpacing>
-          <IconButton aria-label="Add to favorites">
-            <FavoriteIcon />
-          </IconButton>
-          {/* <IconButton aria-label="Share">
-            <ShareIcon />
-          </IconButton> */}
-          <Button size="small" href="http://cs52.me/assignments/lab/landing-page/">View</Button>
-          <IconButton
-            className={classnames(classes.expand, {
-              [classes.expandOpen]: this.state.expanded,
-            })}
-            onClick={this.handleExpandClick}
-            aria-expanded={this.state.expanded}
-            aria-label="Show more"
-          >
-            <ExpandMoreIcon />
-          </IconButton>
-        </CardActions>
-        <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
-          <CardContent>
-            <Typography paragraph>Method:</Typography>
-            <Typography paragraph>
-            A landing page you say? Yes, you will be making a landing page based on an real page out there in the world.
-            You will be mimicking the structure and style of a page but with your own content.
-            </Typography>
-            <Typography paragraph>
-            Become comfortable with Chrome DevTools, Be able to mimic structure and style of pages, Focus on refining html/css skills, Build a beautiful static landing page.
-            </Typography>
-          </CardContent>
-        </Collapse>
-      </Card>
-    );
-  }
-}
-
-// RecipeReviewCard.propTypes = {
-//   classes: PropTypes.object.isRequired,
-// };
-
-export default withStyles(styles)(RecipeReviewCard);
+export default withStyles(styles)(PastAssignment);

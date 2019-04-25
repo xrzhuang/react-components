@@ -2,7 +2,7 @@
     {
         "title": "SA5 React + Routing",
         "date": "4/25/2019",
-        "image": "src/img/lab1.png",
+        "image": "./src/img/sa5.jpg",
         "description": {
             "short": "Declarative routing for React",
             "long": "What if you want your frontend to have routes — different URLs that map to different components and layouts of components? We’re going to add React Router to our starterpack so all your future projects can have it!"
@@ -28,14 +28,82 @@
         "link": "http://cs52.me/assignments/sa/routing/"
     },
     {
-        "title": "title",
-        "date": "date",
-        "image": "url",
+        "title": "SA1 Local Dev Environment",
+        "date": "3/29/2019",
+        "image": "./src/img/sa1.png",
         "description": {
-            "short": "Your assignment, should you choose to accept it, (not sure you have much choice there…) is to create a landing page.",
-            "long": "A landing page you say? Yes, you will be making a landing page based on an real page out there in the world. You will be mimicking the structure and style of a page but with your own content. Become comfortable with Chrome DevTools, Be able to mimic structure and style of pages, Focus on refining html/css skills, Build a beautiful static landing page."
+            "short": "First things first. You need a local development environment.",
+            "long": "Why is this important you ask. Couldn’t I just copy code over to a server every time I make changes? You could. But imagine debugging, every change you make you spend a few seconds maybe copying code over, or pushing git. This time adds up. Save yourself hours of your life, get your laptop set up for coding now."
         },
         "steps": [],
-        "link": "url"     
+        "link": "http://cs52.me/assignments/sa/localdev/"     
+    },
+    {
+        "title": "SA2 Git Map",
+        "date": "3/29/2019",
+        "image": "./src/img/sa2.png",
+        "description": {
+            "short": "First things first. If you didn’t fill out the beginning of term survey on canvas, you’ll need to join the github team.",
+            "long": "Did you accept the invitation to the https://github.com/dartmouth-cs52-19S organization via the github classroom link provided? When prompted please join the 19s group! Otherwise you won’t have permissions on the repo to do anything with it."
+        },
+        "steps": [],
+        "link": "http://cs52.me/assignments/sa/git-map/"     
+    },
+    {
+        "title": "SA3 Starterpack",
+        "date": "4/12/2019",
+        "image": "./src/img/sa3.png",
+        "description": {
+            "short": "Let's make ourselves a starter pack with webpack, sass, babel, and eslint!",
+            "long": "Today we’ll be learning about a set of tools for making your code compact and pretty. So far you’ve been using html and css in separate files and the sites have been fairly compact — but as your sites grow more complex and include more and more libraries there has to be a way to manage it all. We’ll introduce a set of tools to help you build complex sites with many module dependencies easily."
+        },
+        "steps": [],
+        "link": "http://cs52.me/assignments/sa/starterpack/"     
+    },
+    {
+        "title": "SA4 Intro React",
+        "date": "4/15/2019",
+        "image": "./src/img/sa4.png",
+        "description": {
+            "short": "We'll take a dive into the world of React, the new style of front-end development!",
+            "long": "Today we’ll be learning about React! So far you’ve been using html and css to build static sites. Sites that do not have much going on in terms of content that changes. React is a javascript frontend framework for making dynamic sites. In this workshop we will build a video chooser. We will also work with the webpack+babel+eslint starter code that you worked on in the previous short assignment."
+        },
+        "steps": [],
+        "link": "http://cs52.me/assignments/sa/react-videos/"     
+    },
+    {
+        "title": "LAB1 Landing Page",
+        "date": "4/6/2019",
+        "image": "./src/img/lab1.png",
+        "description": {
+            "short": "Your assignment, should you choose to accept it, (not sure you have much choice there…) is to create a landing page.",
+            "long": "A landing page you say? Yes, you will be making a landing page based on an real page out there in the world. You will be mimicking the structure and style of a page but with your own content."
+        },
+        "steps": [],
+        "link": "http://cs52.me/assignments/lab/landing-page/"
+    },
+    {
+        "title": "LAB3 React Notes",
+        "date": "4/22/2019",
+        "image": "./src/img/lab3.png",
+        "description": {
+            "short": "Where we dive deeper into React and construct a realtime collaborative post-it note app with React!",
+            "long": "We're going to be constructing a site that has a bunch of draggable notes. Each note has a title and some content. The title and content should be editable and everything should happen in real time."
+        },
+        "steps": [
+            {
+                "title": "Make a Note Component",
+                "content": "Make a basic note component that has all the minimal functionaity. At this point, nothing will be persistent"
+            },
+            {
+                "title": "Add Notes",
+                "content": "Create an input that at minimum takes a title and creates a note on the page."
+            },
+            {
+                "title": "Add Firebase",
+                "content": "Set up a firebase database that will store your notes. Instead of changing state, now add and modify notes in the db to update in real time"
+            }
+        ],
+        "link": "http://cs52.me/assignments/lab/react-notes/"     
     }
 ]

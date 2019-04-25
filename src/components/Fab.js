@@ -37,7 +37,6 @@ class AlertDialog extends React.Component {
       return (
         <div>
           <Fab
-            variant="large"
             onClick={this.handleClickOpen}
             id="button"
             color="primary"

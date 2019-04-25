@@ -6,10 +6,9 @@ import { withStyles } from '@material-ui/core/styles';
 import classnames from 'classnames';
 import IconButton from '@material-ui/core/IconButton';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import CardMedia from '@material-ui/core/CardMedia';
 import ProgressBar from './progress_bar';
 import AssignmentStepper from './assignment_stepper';
-import assignments from '../assignments.json';
-
 
 class CurrentAssignment extends Component {
   constructor(props) {
@@ -18,14 +17,13 @@ class CurrentAssignment extends Component {
     this.state = {
       activeStep: 1,
       expanded: false,
-      currentAssignment: assignments[0],
     };
   }
 
   handleStepChange = (newStep) => {
-    this.setState(state => ({
+    this.setState({
       activeStep: newStep,
-    }));
+    });
   }
 
   handleExpandClick = () => {
@@ -36,17 +34,23 @@ class CurrentAssignment extends Component {
 
   render() {
     const { classes } = this.props;
+    const { assignment } = this.props;
 
     return (
       <Card className={classes.root}>
         <CardHeader
           title="Current Assignment"
-          subheader={this.state.currentAssignment.title}
+          subheader={assignment.title}
+        />
+        <CardMedia
+          className={classes.media}
+          image={assignment.image}
+          title={assignment.title}
         />
         <CardContent>
-          <ProgressBar activeStep={this.state.activeStep} steps={this.state.currentAssignment.steps} />
+          <ProgressBar activeStep={this.state.activeStep} steps={assignment.steps} />
           <div className={classes.descriptionContainer}>
-            <p className={classes.description}>{this.state.currentAssignment.description.long}</p>
+            <p className={classes.description}>{assignment.description.long}</p>
             <IconButton
               className={classnames(classes.expand, {
                 [classes.expandOpen]: this.state.expanded,
@@ -58,7 +62,7 @@ class CurrentAssignment extends Component {
               <ExpandMoreIcon />
             </IconButton>
           </div>
-          {this.state.expanded ? <AssignmentStepper activeStep={this.state.activeStep} steps={this.state.currentAssignment.steps} handleStepChange={this.handleStepChange} /> : null}
+          {this.state.expanded ? <AssignmentStepper activeStep={this.state.activeStep} steps={assignment.steps} handleStepChange={this.handleStepChange} /> : null}
         </CardContent>
       </Card>
     );
@@ -68,6 +72,8 @@ class CurrentAssignment extends Component {
 const styles = {
   root: {
     textAlign: 'center',
+    marginTop: '20px',
+    marginBottom: '20px',
   },
   expand: {
     marginLeft: 5,
@@ -85,6 +91,10 @@ const styles = {
   },
   description: {
     maxWidth: '80%',
+  },
+  media: {
+    height: 0,
+    paddingTop: '56.25%', // 16:9
   },
 };
 
