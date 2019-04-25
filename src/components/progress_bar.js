@@ -1,23 +1,18 @@
 import React from 'react';
-import LinearProgress from '@material-ui/core/LinearProgress';
+// import LinearProgress component here
 import { withStyles } from '@material-ui/core/styles';
 
 const ProgressBar = (props) => {
-  const MIN = 0;
-  const MAX = props.steps.length;
-  const normalise = activeStep => (activeStep - MIN) * 100 / (MAX - MIN);
-  const { classes } = props;
+  // Declare important variables here
 
   return (
-    <React.Fragment>
-      <LinearProgress className={classes.progressBar} variant="determinate" value={normalise(props.activeStep)} />
-    </React.Fragment>
+    // Create progress bar here
+    <p>Uncomment me when you you make progress bar!</p>
   );
 };
 
 const styles = {
   progressBar: {
-    // background: 'linear-gradient(45deg, #838aaf 30%, #FF8E53 90%)',
     background: '#babed6',
     borderRadius: 3,
     height: 10,
