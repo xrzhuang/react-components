@@ -68,6 +68,8 @@ class CurrentAssignment extends Component {
 const styles = {
   root: {
     textAlign: 'center',
+    marginTop: '20px',
+    marginBottom: '20px',
   },
   expand: {
     marginLeft: 5,
