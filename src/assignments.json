@@ -28,14 +28,27 @@
         "link": "http://cs52.me/assignments/sa/routing/"
     },
     {
-        "title": "title",
-        "date": "date",
-        "image": "./src/img/lab1.png",
+        "title": "Lab3 React Notes",
+        "date": "4/22/2019",
+        "image": "./src/img/lab3.png",
         "description": {
-            "short": "Your assignment, should you choose to accept it, (not sure you have much choice there…) is to create a landing page.",
-            "long": "A landing page you say? Yes, you will be making a landing page based on an real page out there in the world. You will be mimicking the structure and style of a page but with your own content. Become comfortable with Chrome DevTools, Be able to mimic structure and style of pages, Focus on refining html/css skills, Build a beautiful static landing page."
+            "short": "Where we dive deeper into React and construct a realtime collaborative post-it note app with React!",
+            "long": "We're going to be constructing a site that has a bunch of draggable notes. Each note has a title and some content. The title and content should be editable and everything should happen in real time."
         },
-        "steps": [],
-        "link": "url"     
+        "steps": [
+            {
+                "title": "Make a Note Component",
+                "content": "Make a basic note component that has all the minimal functionaity. At this point, nothing will be persistent"
+            },
+            {
+                "title": "Add Notes",
+                "content": "Create an input that at minimum takes a title and creates a note on the page."
+            },
+            {
+                "title": "Add Firebase",
+                "content": "Set up a firebase database that will store your notes. Instead of changing state, now add and modify notes in the db to update in real time"
+            }
+        ],
+        "link": "http://cs52.me/assignments/lab/react-notes/"     
     }
 ]
