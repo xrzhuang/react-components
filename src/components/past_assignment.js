@@ -77,7 +77,10 @@ class PastAssignment extends React.Component {
 
 const styles = theme => ({
   card: {
-    maxWidth: 400,
+    width: '40%',
+    marginBottom: '20px',
+    marginLeft: '10px',
+    marginRight: '10px',
   },
   media: {
     height: 0,

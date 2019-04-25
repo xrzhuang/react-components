@@ -27,10 +27,12 @@ class App extends Component {
     });
 
     return (
-      <div>
+      <div className="app">
         <NavBar />
         <CurrentAssignment assignment={assignments[this.state.currentAssignment]} />
-        {pastAssignments}
+        <div className="pastA">
+          {pastAssignments}
+        </div>
         <AlertDialog />
       </div>
     );
