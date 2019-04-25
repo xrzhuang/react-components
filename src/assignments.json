@@ -1,7 +1,12 @@
 [
     {
         "title": "SA5 React + Routing",
-        "description": "What if you want your frontend to have routes — different URLs that map to different components and layouts of components? We’re going to add React Router to our starterpack so all your future projects can have it!",
+        "date": "4/25/2019",
+        "image": "src/img/lab1.png",
+        "description": {
+            "short": "Declarative routing for React",
+            "long": "What if you want your frontend to have routes — different URLs that map to different components and layouts of components? We’re going to add React Router to our starterpack so all your future projects can have it!"
+        },
         "steps": [
             {
                 "title": "Route Setup",
@@ -19,6 +24,18 @@
                 "title": "Desployment",
                 "content": "Deploy our new site using surge so it can be viewed by everyone and graded"
             }
-        ]
+        ],
+        "link": "http://cs52.me/assignments/sa/routing/"
+    },
+    {
+        "title": "title",
+        "date": "date",
+        "image": "url",
+        "description": {
+            "short": "Your assignment, should you choose to accept it, (not sure you have much choice there…) is to create a landing page.",
+            "long": "A landing page you say? Yes, you will be making a landing page based on an real page out there in the world. You will be mimicking the structure and style of a page but with your own content. Become comfortable with Chrome DevTools, Be able to mimic structure and style of pages, Focus on refining html/css skills, Build a beautiful static landing page."
+        },
+        "steps": [],
+        "link": "url"     
     }
 ]

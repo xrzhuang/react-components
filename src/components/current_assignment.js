@@ -46,7 +46,7 @@ class CurrentAssignment extends Component {
         <CardContent>
           <ProgressBar activeStep={this.state.activeStep} steps={this.state.currentAssignment.steps} />
           <div className={classes.descriptionContainer}>
-            <p className={classes.description}>{this.state.currentAssignment.description}</p>
+            <p className={classes.description}>{this.state.currentAssignment.description.long}</p>
             <IconButton
               className={classnames(classes.expand, {
                 [classes.expandOpen]: this.state.expanded,
