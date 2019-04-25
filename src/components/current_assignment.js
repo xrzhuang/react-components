@@ -1,70 +1,23 @@
 import React, { Component } from 'react';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardContent from '@material-ui/core/CardContent';
-import { withStyles } from '@material-ui/core/styles';
 import classnames from 'classnames';
-import IconButton from '@material-ui/core/IconButton';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import CardMedia from '@material-ui/core/CardMedia';
-import ProgressBar from './progress_bar';
-import AssignmentStepper from './assignment_stepper';
+import { withStyles } from '@material-ui/core/styles';
 
 class CurrentAssignment extends Component {
   constructor(props) {
     super(props);
-
+ 
     this.state = {
       activeStep: 1,
       expanded: false,
     };
   }
 
-  handleStepChange = (newStep) => {
-    this.setState({
-      activeStep: newStep,
-    });
-  }
-
-  handleExpandClick = () => {
-    this.setState(prevState => ({
-      expanded: !prevState.expanded,
-    }));
-  }
+  // handlers will go here
 
   render() {
-    const { classes } = this.props;
-    const { assignment } = this.props;
-
     return (
-      <Card className={classes.root}>
-        <CardHeader
-          title="Current Assignment"
-          subheader={assignment.title}
-        />
-        <CardMedia
-          className={classes.media}
-          image={assignment.image}
-          title={assignment.title}
-        />
-        <CardContent>
-          <ProgressBar activeStep={this.state.activeStep} steps={assignment.steps} />
-          <div className={classes.descriptionContainer}>
-            <p className={classes.description}>{assignment.description.long}</p>
-            <IconButton
-              className={classnames(classes.expand, {
-                [classes.expandOpen]: this.state.expanded,
-              })}
-              onClick={this.handleExpandClick}
-              aria-expanded={this.state.expanded}
-              aria-label="Show more"
-            >
-              <ExpandMoreIcon />
-            </IconButton>
-          </div>
-          {this.state.expanded ? <AssignmentStepper activeStep={this.state.activeStep} steps={assignment.steps} handleStepChange={this.handleStepChange} /> : null}
-        </CardContent>
-      </Card>
+      // 
+      <div/>
     );
   }
 }
