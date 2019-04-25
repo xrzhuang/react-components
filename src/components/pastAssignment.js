@@ -103,7 +103,8 @@ class RecipeReviewCard extends React.Component {
           <CardContent>
             <Typography paragraph>Method:</Typography>
             <Typography paragraph>
-            A landing page you say? Yes, you will be making a landing page based on an real page out there in the world. You will be mimicking the structure and style of a page but with your own content.
+            A landing page you say? Yes, you will be making a landing page based on an real page out there in the world.
+            You will be mimicking the structure and style of a page but with your own content.
             </Typography>
             <Typography paragraph>
             Become comfortable with Chrome DevTools, Be able to mimic structure and style of pages, Focus on refining html/css skills, Build a beautiful static landing page.
