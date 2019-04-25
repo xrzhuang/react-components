@@ -1,5 +1,4 @@
 import React from 'react';
-// import LinearProgress component here
 import { withStyles } from '@material-ui/core/styles';
 
 const ProgressBar = (props) => {
@@ -7,7 +6,7 @@ const ProgressBar = (props) => {
 
   return (
     // Create progress bar here
-    <p>Uncomment me when you you make progress bar!</p>
+    <p>Delete me when you you make progress bar!</p>
   );
 };
 

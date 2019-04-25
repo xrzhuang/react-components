@@ -1,6 +1,23 @@
-// insert imports here
+import React from 'react';
+import { withStyles } from '@material-ui/core/styles';
+import red from '@material-ui/core/colors/red';
 
-// insert card component here
+class OtherAssignment extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      expanded: false,
+    };
+  }
+
+  // insert functions here
+
+  render() { // insert render stuff here
+    return (
+      <div />
+    );
+  }
+}
 
 const styles = theme => ({
   card: {

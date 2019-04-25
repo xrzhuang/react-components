@@ -1,8 +1,10 @@
+import React from 'react';
 
 const NavBar = () => {
-
   return (
-    // add app bar + tool bar here
+    // Add AppBar and ToolBar here
+    <div />
+
   );
 };
 

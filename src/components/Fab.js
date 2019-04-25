@@ -20,8 +20,8 @@ class AlertDialog extends React.Component {
 
   render() {
     return (
-
-    );     
+      <div />
+    );
   }
 }
 

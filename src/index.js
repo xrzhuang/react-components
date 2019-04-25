@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import PastAssignment from './components/past_assignment';
+import OtherAssignment from './components/other_assignment';
 import './style.scss';
 import NavBar from './components/nav_bar';
 import CurrentAssignment from './components/current_assignment';
 import assignments from './assignments.json';
-import AlertDialog from './components/Fab';
 
 class App extends Component {
   constructor(props) {
@@ -23,7 +22,7 @@ class App extends Component {
 
   render() {
     const pastAssignments = assignments.map((assignment, index) => {
-      return index !== this.state.currentAssignment && <PastAssignment key={assignment.title} assignment={assignment} setCurrentAssignment={this.updateCurrentAssignment} index={index} />;
+      return index !== this.state.currentAssignment && <OtherAssignment key={assignment.title} assignment={assignment} setCurrentAssignment={this.updateCurrentAssignment} index={index} />;
     });
 
     return (
@@ -33,7 +32,6 @@ class App extends Component {
         <div className="pastA">
           {pastAssignments}
         </div>
-        <AlertDialog />
       </div>
     );
   }
