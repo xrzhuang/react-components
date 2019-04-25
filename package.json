@@ -1,16 +1,16 @@
 {
-  "name": "starterpack",
+  "name": "material-cs52",
   "version": "1.0.0",
   "main": "src/index.js",
-  "repository": "https://github.com/dartmouth-cs52-19S/starterpack-prosper007",
-  "author": "Prosper",
+  "repository": "https://github.com/dartmouth-cs52-19S/workshop-ws-04-25-react-comps",
+  "author": "",
   "license": "MIT",
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server",
     "test": "eslint src/**.js",
     "build": "yarn clean; NODE_ENV=production webpack --colors",
     "clean": "rimraf dist",
-    "deploy": "yarn build; surge -p dist -d prosper-cs52-starter.surge.sh; yarn clean"
+    "deploy": "yarn build; surge -p dist -d material-cs52.surge.sh; yarn clean"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
@@ -48,6 +48,7 @@
     "classnames": "^2.2.6",
     "jquery": "^3.4.0",
     "lodash.debounce": "^4.0.8",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.0"

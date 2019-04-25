@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PastAssignment from './components/past_assignment';
 import './style.scss';
+import NavBar from './components/nav_bar';
 import CurrentAssignment from './components/current_assignment';
 import assignments from './assignments.json';
-
+import AlertDialog from './components/Fab';
 
 class App extends Component {
   constructor(props) {
@@ -27,16 +28,13 @@ class App extends Component {
 
     return (
       <div>
+        <NavBar />
         <CurrentAssignment assignment={assignments[this.state.currentAssignment]} />
         {pastAssignments}
+        <AlertDialog />
       </div>
     );
   }
 }
 
-// RecipeReviewCard.propTypes = {
-//   classes: PropTypes.object.isRequired,
-// };
-
 ReactDOM.render(<App />, document.getElementById('main'));
-// export default withStyles(styles)(RecipeReviewCard);
