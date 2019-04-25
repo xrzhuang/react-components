@@ -2,18 +2,21 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import RecipeReviewCard from './components/pastAssignment';
 // import PropTypes from 'prop-types';
+import './style.scss';
+import CurrentAssignment from './components/current_assignment';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      no: false,
-    };
+    this.state = {};
   }
 
   render() {
     return (
-      <RecipeReviewCard />
+      <div>
+        <CurrentAssignment />
+        <RecipeReviewCard />
+      </div>
     );
   }
 }
@@ -22,5 +25,5 @@ class App extends Component {
 //   classes: PropTypes.object.isRequired,
 // };
 
-ReactDOM.render(<RecipeReviewCard />, document.getElementById('main'));
+ReactDOM.render(<App />, document.getElementById('main'));
 // export default withStyles(styles)(RecipeReviewCard);
