@@ -50,7 +50,7 @@ class PastAssignment extends React.Component {
             <FavoriteIcon />
           </IconButton>
           <Button size="small" href={assignment.link}>View</Button>
-          <Button size="small" onClick={this.setCurrentAssignment}>Set Current</Button>
+          <Button size="small" onClick={this.setCurrentAssignment}>Set To Current</Button>
           <IconButton
             className={classnames(classes.expand, {
               [classes.expandOpen]: this.state.expanded,
@@ -84,7 +84,7 @@ const styles = theme => ({
   },
   media: {
     height: 0,
-    paddingTop: '56.25%', // 16:9
+    paddingTop: '56.25%',
   },
   actions: {
     display: 'flex',
