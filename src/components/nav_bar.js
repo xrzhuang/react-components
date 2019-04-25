@@ -7,7 +7,10 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
   menu: {
-    marginLeft: 900,
+    display: 'flex',
+  },
+  header: {
+    marginRight: 'auto',
   },
 };
 
@@ -17,7 +20,7 @@ const NavBar = (props) => {
     <div>
       <AppBar position="static" color="default">
         <Toolbar>
-          <Typography variant="h6" color="inherit">
+          <Typography variant="h6" color="inherit" className={classes.header}>
             Dartmouth CS52 — 19S
           </Typography>
           <div className={classes.menu}>
